@@ -131,6 +131,12 @@ h2 {
 .section-intro {
     color: var(--muted-color); 
     max-width: 800px;
+    
+    /* Centering the block horizontally while keeping your bottom spacing */
+    margin: 0 auto 2.5rem auto; 
+    
+    /* Keeps text aligned left relative to itself and the accent border */
+    text-align: left; 
 }
 
 .grid {
