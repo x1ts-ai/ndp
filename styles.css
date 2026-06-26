@@ -1,97 +1,229 @@
-/* Reset default browser margins */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --bg-color: #0D0F12;
+    --text-color: #FFFFFF;
+    --accent-color: #D1B464; /* Sampled Gold from X1 Logo */
+    --muted-color: #8E9AAB;
 }
 
-body, html {
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    color: #ffffff;
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
     overflow-x: hidden;
-    background-color: #0b0f19; /* Dark fallback color while image loads */
 }
 
-/* Fullscreen backdrop image with dark overlay for readability */
-.background-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(11, 15, 25, 0.75), rgba(11, 15, 25, 0.85)), url('backdrop.jpg') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-}
-
-/* Main layout wrapper */
-.page-wrapper {
+header {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    padding: 60px 24px;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Centered Logo Header */
-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo img { 
+    height: 40px; 
+    width: auto; 
 }
 
-.logo {
-    max-width: 200px;
-    height: auto;
-    display: block;
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-/* Centralized content block */
-.main-content {
-    text-align: center;
-    max-width: 720px;
-    margin: auto;
-    padding: 40px 0;
+.nav-link:hover { 
+    color: var(--accent-color); 
 }
 
-.main-content h1 {
-    font-size: 2.5rem;
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8rem 4rem;
+    text-align: left;
+    position: relative;
+}
+
+h1 {
+    font-size: 3.5rem;
     font-weight: 700;
-    letter-spacing: -0.01em;
-    margin-bottom: 24px;
-    color: #ffffff;
+    letter-spacing: -0.05em;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
 }
 
-.main-content p {
-    font-size: 1.2rem;
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
+.subheadline {
+    font-size: 1.3rem;
+    color: var(--muted-color);
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1.5rem;
 }
 
-/* Legal disclaimer footer */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.blueprint {
+    background-color: rgba(255,255,255,0.01);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 6rem 4rem;
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+h2 { 
+    font-size: 2rem; 
+    margin-bottom: 1.5rem; 
+    letter-spacing: -0.03em; 
+}
+
+.section-intro {
+    color: var(--muted-color); 
+    max-width: 800px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.card {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+}
+
+.card h3 { 
+    font-size: 1.2rem; 
+    margin-bottom: 0.75rem; 
+    color: var(--accent-color); 
+}
+
+.card p { 
+    color: var(--muted-color); 
+    font-size: 0.95rem; 
+}
+
+.ecosystem {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.ecosystem-text { 
+    max-width: 600px; 
+}
+
+.ecosystem-text p {
+    color: var(--muted-color);
+}
+
+.badge-wrapper img { 
+    max-height: 75px; 
+    width: auto; 
+    opacity: 0.9; 
+}
+
 footer {
-    max-width: 720px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 4rem;
+    background-color: #07080A;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-form { 
+    max-width: 500px; 
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+}
+
+.form-group { 
+    margin-bottom: 1.5rem; 
+}
+
+.form-group input, .form-group textarea {
     width: 100%;
+    padding: 0.8rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    border-radius: 4px;
 }
 
-footer p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.45);
-    font-weight: 400;
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
 }
 
-/* Responsive scaling for mobile devices */
-@media (max-width: 600px) {
-    .page-wrapper { padding: 40px 20px; }
-    .main-content h1 { font-size: 1.85rem; }
-    .main-content p { font-size: 1.05rem; }
-    .logo { max-width: 150px; }
+.btn-submit {
+    background: transparent; 
+    width: 100%; 
+    cursor: pointer;
+}
+
+.notice {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.25);
+    text-align: justify;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 2rem;
+    line-height: 1.5;
+}
+
+/* Responsive Scaling Overrides */
+@media (max-width: 768px) {
+    header, .hero, .blueprint, .ecosystem, footer { 
+        padding: 2rem; 
+    }
+    h1 { 
+        font-size: 2.5rem; 
+    }
+    .ecosystem { 
+        flex-direction: column; 
+        text-align: left; 
+        gap: 2rem; 
+    }
 }
