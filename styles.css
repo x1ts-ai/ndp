@@ -153,9 +153,9 @@ h2 {
 }
 
 .badge-wrapper img { 
-    max-height: 75px; 
+    height: auto;
     width: auto; 
-    opacity: 0.9; 
+    opacity: 1.0; 
 }
 
 footer {
