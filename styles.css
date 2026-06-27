@@ -32,6 +32,11 @@ header {
     height: 96px; 
     width: auto; 
 }
+.ndp-logo-wrapper img.ndp_logo {
+    height: 96px;
+    width: auto;
+    display: block;
+}
 
 .nav-link {
     color: var(--text-color);
