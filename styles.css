@@ -195,7 +195,7 @@ h2 {
 
 /* Fix: Force the image to use its exact native pixel resolution */
 .badge-wrapper img { 
-    width: auto !important; 
+    width: 90% !important; 
     height: auto !important; 
     max-width: none !important; 
     opacity: 0.9; 
